@@ -1,0 +1,17 @@
+[
+{
+  "modid": "definecraft",
+  "name": "DefineCraft",
+  "description": "Reforming the way You play Minecraft with a new List of items and blocks. The things that are hidden within this mod will blow your mind.",
+  "version": "1.9.4-0.0.1.Beta",
+  "mcversion": "1.9.4",
+  "logoFile": "assets/definecraft/DefineCraft.png",
+  "url": "",
+  "updateUrl": "",
+  "authors": ["J0nnay"],
+  "credits": "",
+  "parent": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

@@ -1,0 +1,82 @@
+item.definecraft_LogicChip.name=Logic Chip
+item.definecraft_RefinedWoodenDoor.name=Refined Wooden Door
+item.definecraft_GrinderHead.name=Grinder Head
+item.definecraft_GoldStick.name=Golden Stick
+item.definecraft_ObsidianStick.name=Stick Of Obsidian
+
+item.definecraft_CoalDust.name=Coal Dust
+item.definecraft_IronDust.name=Iron Dust
+item.definecraft_GoldDust.name=Gold Dust
+item.definecraft_DiamondDust.name=Diamond Dust
+
+item.definecraft_EmptyGem.name=Empty Gem
+item.definecraft_EnergyGem.name=Energy Gem
+item.definecraft_Peridot.name=Peridot
+
+item.definecraft_HellStoneDust.name=HellStone Dust
+item.definecraft_HellStoneBar.name=HellStone Ingot
+item.definecraft_HellStoneSword.name=HellStone Sword
+item.definecraft_HellStoneSpade.name=HellStone Shovel
+item.definecraft_HellStonePickAxe.name=HellStone Pickaxe
+item.definecraft_HellStoneAxe.name=HellStone Axe
+item.definecraft_HellStoneHoe.name=HellStone Hoe
+item.definecraft_HellStoneHelmet.name=HellStone Helmet
+item.definecraft_HellStoneChest.name=HellStone Chestplate
+item.definecraft_HellStoneLegs.name=HellStone Leggings
+item.definecraft_HellStoneBoots.name=HellStone Boots
+
+item.definecraft_ObsidianDust.name=Obsidian Dust
+item.definecraft_ObsidianBar.name=Obsidian Ingot
+item.definecraft_ObsidianSword.name=Obsidian Sword
+item.definecraft_ObsidianSpade.name=Obsidian Shovel
+item.definecraft_ObsidianPickAxe.name=Obsidian Pickaxe
+item.definecraft_ObsidianAxe.name=Obsidian Axe
+item.definecraft_ObsidianHoe.name=Obsidian Hoe
+item.definecraft_ObsidianHelmet.name=Obsidian Helmet
+item.definecraft_ObsidianChest.name=Obsidian Chestplate
+item.definecraft_ObsidianLegs.name=Obsidian Leggings
+item.definecraft_ObsidianBoots.name=Obsidian Boots
+
+item.definecraft_TerbiumDust.name=Terbium Dust
+item.definecraft_TerbiumBar.name=Terbium Ingot
+item.definecraft_TerbiumSword.name=Terbium Sword
+item.definecraft_TerbiumSpade.name=Terbium Shovel
+item.definecraft_TerbiumPickAxe.name=Terbium Pickaxe
+item.definecraft_TerbiumAxe.name=Terbium Axe
+item.definecraft_TerbiumHoe.name=Terbium Hoe
+item.definecraft_TerbiumHelmet.name=Terbium Helmet
+item.definecraft_TerbiumChest.name=Terbium Chestplate
+item.definecraft_TerbiumLegs.name=Terbium Leggings
+item.definecraft_TerbiumBoots.name=Terbium Boots
+
+item.definecraft_SilverDust.name=Silver Dust
+item.definecraft_SilverBar.name=Silver Ingot
+item.definecraft_SilverSword.name=Silver Sword
+item.definecraft_SilverSpade.name=Silver Shovel
+item.definecraft_SilverPickAxe.name=Silver Pickaxe
+item.definecraft_SilverAxe.name=Silver Axe
+item.definecraft_SilverHoe.name=Silver Hoe
+item.definecraft_SilverHelmet.name=Silver Helmet
+item.definecraft_SilverChest.name=Silver Chestplate
+item.definecraft_SilverLegs.name=Silver Leggings
+item.definecraft_SilverBoots.name=Silver Boots
+
+tile.definecraft_Grinder.name=Grinder
+tile.definecraft_BarMaker.name=Bar Maker
+tile.definecraft_SmartFurnace.name=Smart Furnace
+tile.definecraft_GemCharger.name=Gem Charger
+tile.definecraft_Infuser.name=Infuser
+
+tile.definecraft_meltingice.name=Melting Block Ice
+tile.definecraft_meltingObsidian.name=Melting Block Obsidian
+tile.definecraft_meltingObsidian1.name=Melting Block Obsidian
+tile.definecraft_meltingObsidian0.name=Melting Block Obsidian
+tile.definecraft_VanishingLight.name=Vanishing Light
+
+tile.definecraft_HellStoneOre.name=HellStone Ore
+tile.definecraft_GemOre.name=Gem Ore
+tile.definecraft_TerbiumOre.name=Terbium Ore
+tile.definecraft_SilverOre.name=Silver Ore
+tile.definecraft_PeridotOre.name=Peridot Ore
+
+itemGroup.DefineCraft=DefineCraft Mod
