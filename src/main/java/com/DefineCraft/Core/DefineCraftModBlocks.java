@@ -6,6 +6,7 @@ import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+import com.DefineCraft.Reference;
 import com.DefineCraft.Blocks.*;
 
 
@@ -75,16 +76,16 @@ public class DefineCraftModBlocks
 	//	GameRegistry.registerBlock(Infuser, "Infuser");
 //other blocks
 	//	GameRegistry.registerBlock(RefinedWoodenDoorBlock, "RefinedWoodenDoorBlock");
-		GameRegistry.registerBlock(meltingObsidian, "meltingObsidian");
-		GameRegistry.registerBlock(meltingObsidian1, "meltingObsidian1");
-		GameRegistry.registerBlock(meltingObsidian0, "meltingObsidian0");
-		GameRegistry.registerBlock(meltingIce, "meltingIce");
-		GameRegistry.registerBlock(VanishingLight, "VanishingLight");
+		GameRegistry.register(meltingObsidian.setRegistryName(Reference.ModID + "_" + "meltingObsidian"));
+		GameRegistry.register(meltingObsidian1.setRegistryName(Reference.ModID + "_" + "meltingObsidian1"));
+		GameRegistry.register(meltingObsidian0.setRegistryName(Reference.ModID + "_" + "meltingObsidian0"));
+		GameRegistry.register(meltingIce.setRegistryName(Reference.ModID + "_" + "meltingIce"));
+		GameRegistry.register(VanishingLight.setRegistryName(Reference.ModID + "_" + "VanishingLight"));
 //Ore
-		GameRegistry.registerBlock(HellStoneOre, "HellStoneOre");
-		GameRegistry.registerBlock(GemOre, "GemOre");
-		GameRegistry.registerBlock(TerbiumOre, "TerbiumOre");
-		GameRegistry.registerBlock(SilverOre, "SilverOre");
-		GameRegistry.registerBlock(PeridotOre, "PeridotOre");
+		GameRegistry.register(HellStoneOre.setRegistryName(Reference.ModID + "_" + "HellStoneOre"));
+		GameRegistry.register(GemOre.setRegistryName(Reference.ModID + "_" + "GemOre"));
+		GameRegistry.register(TerbiumOre.setRegistryName(Reference.ModID + "_" + "TerbiumOre"));
+		GameRegistry.register(SilverOre.setRegistryName(Reference.ModID + "_" + "SilverOre"));
+		GameRegistry.register(PeridotOre.setRegistryName(Reference.ModID + "_" + "PeridotOre"));
     }
 }

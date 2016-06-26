@@ -47,7 +47,7 @@ public class HellStoneArmor extends ItemArmor
 	//public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) 
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack, IBlockState blockState,Block block, BlockPos blockPos)
 	{
-		if (itemStack.getItem() == DefineCraftModItems.HellStoneBoots)
+/*		if (itemStack.getItem() == DefineCraftModItems.HellStoneBoots)
 		{
 				for(int _x = -3; _x <= 3; _x++) {
 				for(int _z = -3; _z <= 3; _z++) {
@@ -55,7 +55,7 @@ public class HellStoneArmor extends ItemArmor
 							int x = (int) player.posX;
 							int y = (int) player.posY - 1;
 							int z = (int) player.posZ;
-							boolean IsFlowing = (world.getBlockState(blockPos.getDistance(x+_x, y, z+_z)) >= 1); //(x+_x, y, z+_z).getBlock >= 1);
+							boolean IsFlowing =  (world.getBlockState(BlockLiquid.LEVEL) >= 1); //(x+_x, y, z+_z).getBlock >= 1);
 							boolean IsStill = (world.getBlockMetadata(x+_x, y, z+_z) == 0);
 							Block block0 = world.getBlock(x,y+1,z);
 							Block block = world.getBlock(x+_x, y, z+_z);
@@ -71,31 +71,32 @@ public class HellStoneArmor extends ItemArmor
 					        if(block == Blocks.WATER && IsFlowing || block ==Blocks.FLOWING_WATER && IsFlowing || block == Blocks.LAVA && IsFlowing || block ==Blocks.FLOWING_LAVA && IsFlowing){
 				    			world.setBlock(x+_x, y, z+_z, DefineCraftModBlocks.meltingObsidian0);
 				    			world.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), "random.fizz", 0.5F, 2.6F + (world.rand.nextFloat() - world.rand.nextFloat()) * 0.8F);
-				    			}
+				    			} */
 					      //has full armor
 							if (itemStack.getItem() == DefineCraftModItems.HellStoneBoots && itemStack.getItem() == DefineCraftModItems.HellStoneLegs && itemStack.getItem() == DefineCraftModItems.HellStoneChest && itemStack.getItem() == DefineCraftModItems.HellStoneHelmet){
 								{
-								if (world.getLightValue (x-1, y+1, z) <7 && block0 != DefineCraftModBlocks.VanishingLight){
-								if (world.getBlock(x-1, y+1, z) == Blocks.air){ 
-									 world.setBlock(x-1,y+1,z, DefineCraftModBlocks.VanishingLight);
-									 world.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), "step.stone", 0.5F, 2.6F + (world.rand.nextFloat() - world.rand.nextFloat()) * 0.8F);
-								  }
-								  else
-								  { 
-									 world.setBlock(x-1,y+2,z, DefineCraftModBlocks.VanishingLight);
-								     world.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), "step.stone", 0.5F, 2.6F + (world.rand.nextFloat() - world.rand.nextFloat()) * 0.8F);
-								  }
-								  }
+					//			if (world.getLightValue (x-1, y+1, z) <7 && block0 != DefineCraftModBlocks.VanishingLight){
+					//			if (world.getBlock(x-1, y+1, z) == Blocks.air){ 
+					//				 world.setBlock(x-1,y+1,z, DefineCraftModBlocks.VanishingLight);
+					//				 world.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), "step.stone", 0.5F, 2.6F + (world.rand.nextFloat() - world.rand.nextFloat()) * 0.8F);
+									// world.playSound(player, (float)x + 0.5F, (float)y + 0.5F, (float)z + 0.5F, SoundEvent., 0.5F, 2.6F+ (world.rand.nextFloat() - world.rand.nextFloat()) * 0.8F, null);
+					//			}
+					//			  else
+					//			  { 
+					//				 world.setBlock(x-1,y+2,z, DefineCraftModBlocks.VanishingLight);
+					//			     world.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), "step.stone", 0.5F, 2.6F + (world.rand.nextFloat() - world.rand.nextFloat()) * 0.8F);
+					//			  }
+					//			  }
 								 if (player.isBurning()){
 									player.extinguish(); 
 									// world.playSound((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), "random.fizz", 0.5F, 2.6F + (world.rand.nextFloat() - world.rand.nextFloat()) * 0.8F);
 								 }
 							}
 					        }
-					    }
-					}
-				}
-			}
+					//    }
+				//	}
+			//	}
+			//}
 		//Just Chest
 			if (itemStack.getItem() == (DefineCraftModItems.HellStoneChest)){
 				player.fallDistance = 0.0F;

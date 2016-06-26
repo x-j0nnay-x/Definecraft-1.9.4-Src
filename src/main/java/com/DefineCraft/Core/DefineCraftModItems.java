@@ -162,68 +162,68 @@ public static void pre_init() {
 
 	public static void init()
     {
-        GameRegistry.registerItem(LogicChip, "LogicChip");
+        GameRegistry.register(LogicChip.setRegistryName(Reference.ModID + "_" + "LogicChip"));
 	//	GameRegistry.registerItem(RefinedWoodenDoor, "RefinedWoodenDoor");
-		GameRegistry.registerItem(GrinderHead, "GrinderHead");
-		GameRegistry.registerItem(GoldStick, "GoldStick");
-		GameRegistry.registerItem(ObsidianStick, "ObsidianStick");
+		GameRegistry.register(GrinderHead.setRegistryName(Reference.ModID + "_" + "GrinderHead"));
+		GameRegistry.register(GoldStick.setRegistryName(Reference.ModID + "_" + "GoldStick"));
+		GameRegistry.register(ObsidianStick.setRegistryName(Reference.ModID + "_" + "ObsidianStick"));
 //Dust
-		GameRegistry.registerItem(CoalDust, "CoalDust");
-		GameRegistry.registerItem(IronDust, "IronDust");
-		GameRegistry.registerItem(GoldDust, "GoldDust");
-		GameRegistry.registerItem(DiamondDust, "DiamondDust");		
+		GameRegistry.register(CoalDust.setRegistryName(Reference.ModID + "_" + "CoalDust"));
+		GameRegistry.register(IronDust.setRegistryName(Reference.ModID + "_" + "IronDust"));
+		GameRegistry.register(GoldDust.setRegistryName(Reference.ModID + "_" + "GoldDust"));
+		GameRegistry.register(DiamondDust.setRegistryName(Reference.ModID + "_" + "DiamondDust"));		
 //Gems
-		GameRegistry.registerItem(EmptyGem, "EmptyGem");
-		GameRegistry.registerItem(EnergyGem, "EnergyGem");
-		GameRegistry.registerItem(Peridot, "Peridot");
+		GameRegistry.register(EmptyGem.setRegistryName(Reference.ModID + "_" + "EmptyGem"));
+		GameRegistry.register(EnergyGem.setRegistryName(Reference.ModID + "_" + "EnergyGem"));
+		GameRegistry.register(Peridot.setRegistryName(Reference.ModID + "_" + "Peridot"));
 //HellStone
-		GameRegistry.registerItem(HellStoneDust, "HellStoneDust");
-		GameRegistry.registerItem(HellStoneBar, "HellStoneBar");
-		GameRegistry.registerItem(HellStoneSword, "HellStoneSword");
-		GameRegistry.registerItem(HellStoneSpade, "HellStoneSpade");
-		GameRegistry.registerItem(HellStonePickAxe, "HellStonePickAxe");
-		GameRegistry.registerItem(HellStoneAxe, "HellStoneAxe");
-		GameRegistry.registerItem(HellStoneHoe, "HellStoneHoe");
-		GameRegistry.registerItem(HellStoneHelmet, "HellStoneHelmet");
-		GameRegistry.registerItem(HellStoneChest, "HellStoneChest");
-		GameRegistry.registerItem(HellStoneLegs, "HellStoneLegs");
-		GameRegistry.registerItem(HellStoneBoots, "HellStoneBoots");
+		GameRegistry.register(HellStoneDust.setRegistryName(Reference.ModID + "_" + "HellStoneDust"));
+		GameRegistry.register(HellStoneBar.setRegistryName(Reference.ModID + "_" + "HellStoneBar"));
+		GameRegistry.register(HellStoneSword.setRegistryName(Reference.ModID + "_" + "HellStoneSword"));
+		GameRegistry.register(HellStoneSpade.setRegistryName(Reference.ModID + "_" + "HellStoneSpade"));
+		GameRegistry.register(HellStonePickAxe.setRegistryName(Reference.ModID + "_" + "HellStonePickAxe"));
+		GameRegistry.register(HellStoneAxe.setRegistryName(Reference.ModID + "_" + "HellStoneAxe"));
+		GameRegistry.register(HellStoneHoe.setRegistryName(Reference.ModID + "_" + "HellStoneHoe"));
+		GameRegistry.register(HellStoneHelmet.setRegistryName(Reference.ModID + "_" + "HellStoneHelmet"));
+		GameRegistry.register(HellStoneChest.setRegistryName(Reference.ModID + "_" + "HellStoneChest"));
+		GameRegistry.register(HellStoneLegs.setRegistryName(Reference.ModID + "_" + "HellStoneLegs"));
+		GameRegistry.register(HellStoneBoots.setRegistryName(Reference.ModID + "_" + "HellStoneBoots"));
 //Obsidian
-		GameRegistry.registerItem(ObsidianDust, "ObsidianDust");
-		GameRegistry.registerItem(ObsidianBar, "ObsidianBar");
-		GameRegistry.registerItem(ObsidianSword, "ObsidianSword");
-		GameRegistry.registerItem(ObsidianSpade, "ObsidianSpade");
-		GameRegistry.registerItem(ObsidianPickAxe, "ObsidianPickAxe");
-		GameRegistry.registerItem(ObsidianAxe, "ObsidianAxe");
-		GameRegistry.registerItem(ObsidianHoe, "ObsidianHoe");
-		GameRegistry.registerItem(ObsidianHelmet, "ObsidianHelmet");
-		GameRegistry.registerItem(ObsidianChest, "ObsidianChest");
-		GameRegistry.registerItem(ObsidianLegs, "ObsidianLegs");
-		GameRegistry.registerItem(ObsidianBoots, "ObsidianBoots");
+		GameRegistry.register(ObsidianDust.setRegistryName(Reference.ModID + "_" + "ObsidianDust"));
+		GameRegistry.register(ObsidianBar.setRegistryName(Reference.ModID + "_" + "ObsidianBar"));
+		GameRegistry.register(ObsidianSword.setRegistryName(Reference.ModID + "_" + "ObsidianSword"));
+		GameRegistry.register(ObsidianSpade.setRegistryName(Reference.ModID + "_" + "ObsidianSpade"));
+		GameRegistry.register(ObsidianPickAxe.setRegistryName(Reference.ModID + "_" + "ObsidianPickAxe"));
+		GameRegistry.register(ObsidianAxe.setRegistryName(Reference.ModID + "_" + "ObsidianAxe"));
+		GameRegistry.register(ObsidianHoe.setRegistryName(Reference.ModID + "_" + "ObsidianHoe"));
+		GameRegistry.register(ObsidianHelmet.setRegistryName(Reference.ModID + "_" + "ObsidianHelmet"));
+		GameRegistry.register(ObsidianChest.setRegistryName(Reference.ModID + "_" + "ObsidianChest"));
+		GameRegistry.register(ObsidianLegs.setRegistryName(Reference.ModID + "_" + "ObsidianLegs"));
+		GameRegistry.register(ObsidianBoots.setRegistryName(Reference.ModID + "_" + "ObsidianBoots"));
 //Terbium
-		GameRegistry.registerItem(TerbiumDust, "TerbiumDust");
-		GameRegistry.registerItem(TerbiumBar, "TerbiumBar");
-		GameRegistry.registerItem(TerbiumSword, "TerbiumSword");
-		GameRegistry.registerItem(TerbiumSpade, "TerbiumSpade");
-		GameRegistry.registerItem(TerbiumPickAxe, "TerbiumPickAxe");
-		GameRegistry.registerItem(TerbiumAxe, "TerbiumAxe");
-		GameRegistry.registerItem(TerbiumHoe, "TerbiumHoe");
-		GameRegistry.registerItem(TerbiumHelmet, "TerbiumHelmet");
-		GameRegistry.registerItem(TerbiumChest, "TerbiumChest");
-		GameRegistry.registerItem(TerbiumLegs, "TerbiumLegs");
-		GameRegistry.registerItem(TerbiumBoots, "TerbiumBoots");
+		GameRegistry.register(TerbiumDust.setRegistryName(Reference.ModID + "_" + "TerbiumDust"));
+		GameRegistry.register(TerbiumBar.setRegistryName(Reference.ModID + "_" + "TerbiumBar"));
+		GameRegistry.register(TerbiumSword.setRegistryName(Reference.ModID + "_" + "TerbiumSword"));
+		GameRegistry.register(TerbiumSpade.setRegistryName(Reference.ModID + "_" + "TerbiumSpade"));
+		GameRegistry.register(TerbiumPickAxe.setRegistryName(Reference.ModID + "_" + "TerbiumPickAxe"));
+		GameRegistry.register(TerbiumAxe.setRegistryName(Reference.ModID + "_" + "TerbiumAxe"));
+		GameRegistry.register(TerbiumHoe.setRegistryName(Reference.ModID + "_" + "TerbiumHoe"));
+		GameRegistry.register(TerbiumHelmet.setRegistryName(Reference.ModID + "_" + "TerbiumHelmet"));
+		GameRegistry.register(TerbiumChest.setRegistryName(Reference.ModID + "_" + "TerbiumChest"));
+		GameRegistry.register(TerbiumLegs.setRegistryName(Reference.ModID + "_" + "TerbiumLegs"));
+		GameRegistry.register(TerbiumBoots.setRegistryName(Reference.ModID + "_" + "TerbiumBoots"));
 //Silver
-		GameRegistry.registerItem(SilverDust, "SilverDust");
-		GameRegistry.registerItem(SilverBar, "SilverBar");
-		GameRegistry.registerItem(SilverSword, "SilverSword");
-		GameRegistry.registerItem(SilverSpade, "SilverSpade");
-		GameRegistry.registerItem(SilverPickAxe, "SilverPickAxe");
-		GameRegistry.registerItem(SilverAxe, "SilverAxe");
-		GameRegistry.registerItem(SilverHoe, "SilverHoe");
-		GameRegistry.registerItem(SilverHelmet, "SilverHelmet");
-		GameRegistry.registerItem(SilverChest, "SilverChest");
-		GameRegistry.registerItem(SilverLegs, "SilverLegs");
-		GameRegistry.registerItem(SilverBoots, "SilverBoots");
+		GameRegistry.register(SilverDust.setRegistryName(Reference.ModID + "_" + "SilverDust"));
+		GameRegistry.register(SilverBar.setRegistryName(Reference.ModID + "_" + "SilverBar"));
+		GameRegistry.register(SilverSword.setRegistryName(Reference.ModID + "_" + "SilverSword"));
+		GameRegistry.register(SilverSpade.setRegistryName(Reference.ModID + "_" + "SilverSpade"));
+		GameRegistry.register(SilverPickAxe.setRegistryName(Reference.ModID + "_" + "SilverPickAxe"));
+		GameRegistry.register(SilverAxe.setRegistryName(Reference.ModID + "_" + "SilverAxe"));
+		GameRegistry.register(SilverHoe.setRegistryName(Reference.ModID + "_" + "SilverHoe"));
+		GameRegistry.register(SilverHelmet.setRegistryName(Reference.ModID + "SilverHelmet"));
+		GameRegistry.register(SilverChest.setRegistryName(Reference.ModID + "SilverChest"));
+		GameRegistry.register(SilverLegs.setRegistryName(Reference.ModID + "SilverLegs"));
+		GameRegistry.register(SilverBoots.setRegistryName(Reference.ModID + "SilverBoots"));
 
     }
 }
