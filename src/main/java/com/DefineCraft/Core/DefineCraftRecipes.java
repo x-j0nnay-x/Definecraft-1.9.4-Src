@@ -60,7 +60,7 @@ public class DefineCraftRecipes
               GameRegistry.addRecipe(new ItemStack(DefineCraftModItems.ObsidianSpade, 1), new Object[] {" 1 ", " 4 ", " 4 ", '1', DefineCraftModItems.ObsidianBar, '4', DefineCraftModItems.GoldStick});
 
 //Crafting Blocks
-    //          GameRegistry.addRecipe(new ItemStack(DefineCraftModBlocks.Grinder, 1), new Object[] {"xxx", "zyz", "xzx", 'x', Blocks.STONE, 'z',Blocks.COBBLESTONE, 'y', Blocks.FURNACE});
+              GameRegistry.addRecipe(new ItemStack(DefineCraftModBlocks.GrinderIdle, 1), new Object[] {"xwx", "z z","xzx", 'w', DefineCraftModItems.GrinderHead, 'x', Blocks.STONE, 'z',Blocks.COBBLESTONE});
     //          GameRegistry.addRecipe(new ItemStack(DefineCraftModBlocks.BarMaker, 1), new Object[] {"121", "232", "121", '1', DefineCraftModItems.SilverBar, '2', Blocks.COBBLESTONE, '3', DefineCraftModBlocks.SmartFurnace});
     //          GameRegistry.addShapelessRecipe(new ItemStack(DefineCraftModBlocks.SmartFurnace, 1), new Object[] {DefineCraftModItems.LogicChip, Blocks.FURNACE});
     //          GameRegistry.addRecipe(new ItemStack(DefineCraftModBlocks.Infuser, 1), new Object[] {"141", "232", "212", '1', DefineCraftModItems.HellStoneBar, '2', Blocks.PISTON, '3', DefineCraftModBlocks.BarMaker, '4', DefineCraftModItems.LogicChip});

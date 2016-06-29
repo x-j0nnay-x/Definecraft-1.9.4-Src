@@ -4,6 +4,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.DefineCraft.Core.DefineCraftModBlocks;
 import com.DefineCraft.Core.DefineCraftModItems;
+import com.DefineCraft.Core.GuiHandler;
 import com.DefineCraft.Core.Proxy.CommonProxy;
 import com.DefineCraft.World.DefineOreGen;
 
@@ -17,6 +18,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 
@@ -38,11 +40,9 @@ public class DefineCraftCore {
 	@EventHandler
     public void init(FMLInitializationEvent event){
 		proxy.init(event);
-		GameRegistry.registerWorldGenerator(new DefineOreGen(), 0);
-		System.out.println("Loaded in DefineCraft Ore Gen");
-
-
-    }
+		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
+		System.out.println("Loaded DefineCraft Gui's");
+		}
 	public static final CreativeTabs DefineCraft = new CreativeTabs("DefineCraft") {
 	    @Override public Item getTabIconItem() {
 	        return DefineCraftModItems.HellStoneAxe;

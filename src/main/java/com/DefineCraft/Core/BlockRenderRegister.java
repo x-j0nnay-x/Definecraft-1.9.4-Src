@@ -5,6 +5,7 @@ import com.DefineCraft.Items.LogicChip;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderItem;
+import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.IStateMapper;
 import net.minecraft.item.Item;
@@ -13,6 +14,9 @@ import net.minecraftforge.client.model.ModelLoader;
 public class BlockRenderRegister {
 	
 	public static void registerBlockRenderer() {
+//TileEntity
+	//	ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(DefineCraftModBlocks.GrinderActive), 0, new ModelResourceLocation(Reference.ModID + ":" + "GrinderActive", "inventory"));
+	//	ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(DefineCraftModBlocks.GrinderIdle), 0, new ModelResourceLocation(Reference.ModID + ":" + "GrinderIdle", "inventory"));
 //vanishing Block		
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(DefineCraftModBlocks.meltingObsidian), 0, new ModelResourceLocation(Reference.ModID + ":" + "meltingObsidian", "inventory"));
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(DefineCraftModBlocks.meltingObsidian0), 0, new ModelResourceLocation(Reference.ModID + ":" + "meltingObsidian0", "inventory"));

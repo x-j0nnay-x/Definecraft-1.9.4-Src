@@ -224,6 +224,5 @@ public static void pre_init() {
 		GameRegistry.register(SilverChest.setRegistryName(Reference.ModID + "SilverChest"));
 		GameRegistry.register(SilverLegs.setRegistryName(Reference.ModID + "SilverLegs"));
 		GameRegistry.register(SilverBoots.setRegistryName(Reference.ModID + "SilverBoots"));
-
     }
 }
