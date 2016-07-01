@@ -1,80 +1,77 @@
 package com.DefineCraft.Blocks.Grinder;
 
+import com.DefineCraft.Reference;
+
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.ContainerFurnace;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import org.lwjgl.opengl.GL11;
-
-
+@SideOnly(Side.CLIENT)
 public class GrinderGUI extends GuiContainer
 {
-    private static final ResourceLocation furnaceGuiTextures = new ResourceLocation("DefineCraft:textures/gui/Grinder.png");
-/** The player inventory bound to this GUI. */
+    private static final ResourceLocation FURNACE_GUI_TEXTURES = new ResourceLocation(Reference.ModID + ":" + "textures/gui/Grinder.png");
+    /** The player inventory bound to this GUI. */
     private final InventoryPlayer playerInventory;
     private IInventory tileFurnace;
-    
+
     public GrinderGUI(InventoryPlayer playerInv, IInventory furnaceInv)
     {
-        super(new ContainerFurnace(playerInv, furnaceInv));
+        super(new GrinderContainer(playerInv, furnaceInv));
         this.playerInventory = playerInv;
         this.tileFurnace = furnaceInv;
     }
 
     /**
-     * Draw the foreground layer for the GuiContainer (everything in front of the items). Args : mouseX, mouseY
+     * Draw the foreground layer for the GuiContainer (everything in front of the items)
      */
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY)
     {
-    	System.out.println("Flag 2");
         String s = this.tileFurnace.getDisplayName().getUnformattedText();
         this.fontRendererObj.drawString(s, this.xSize / 2 - this.fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
         this.fontRendererObj.drawString(this.playerInventory.getDisplayName().getUnformattedText(), 8, this.ySize - 96 + 2, 4210752);
     }
 
     /**
-     * Args : renderPartialTicks, mouseX, mouseY
+     * Draws the background layer of this container (behind the items).
      */
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY)
     {
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-        this.mc.getTextureManager().bindTexture(furnaceGuiTextures);
-        int k = (this.width - this.xSize) / 2;
-        int l = (this.height - this.ySize) / 2;
-        this.drawTexturedModalRect(k, l, 0, 0, this.xSize, this.ySize);
-        int i1;
+        this.mc.getTextureManager().bindTexture(FURNACE_GUI_TEXTURES);
+        int i = (this.width - this.xSize) / 2;
+        int j = (this.height - this.ySize) / 2;
+        this.drawTexturedModalRect(i, j, 0, 0, this.xSize, this.ySize);
 
-        if (GrinderLogic.isBurning(this.tileFurnace))
+        if (TileEntityGrinder.isBurning(this.tileFurnace))
         {
-            i1 = this.func_175382_i(13);
-            this.drawTexturedModalRect(k + 56, l + 36 + 12 - i1, 176, 12 - i1, 14, i1 + 1);
+            int k = this.getBurnLeftScaled(13);
+            this.drawTexturedModalRect(i + 56, j + 36 + 12 - k, 176, 12 - k, 14, k + 1);
         }
 
-        i1 = this.func_175381_h(24);
-        this.drawTexturedModalRect(k + 79, l + 34, 176, 14, i1 + 1, 16);
+        int l = this.getCookProgressScaled(24);
+        this.drawTexturedModalRect(i + 79, j + 34, 176, 14, l + 1, 16);
     }
 
-    private int func_175381_h(int p_175381_1_)
+    private int getCookProgressScaled(int pixels)
     {
-        int j = this.tileFurnace.getField(2);
-        int k = this.tileFurnace.getField(3);
-        return k != 0 && j != 0 ? j * p_175381_1_ / k : 0;
+        int i = this.tileFurnace.getField(2);
+        int j = this.tileFurnace.getField(3);
+        return j != 0 && i != 0 ? i * pixels / j : 0;
     }
 
-    private int func_175382_i(int p_175382_1_)
+    private int getBurnLeftScaled(int pixels)
     {
-        int j = this.tileFurnace.getField(1);
+        int i = this.tileFurnace.getField(1);
 
-        if (j == 0)
+        if (i == 0)
         {
-            j = 200;
+            i = 200;
         }
 
-        return this.tileFurnace.getField(0) * p_175382_1_ / j;
+        return this.tileFurnace.getField(0) * pixels / i;
     }
 }

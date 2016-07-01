@@ -1,16 +1,15 @@
 package com.DefineCraft.Blocks.Grinder;
 
+import com.DefineCraft.Blocks.GuiSlots.SlotGrinderHead;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IContainerListener;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
-import net.minecraft.inventory.SlotFurnaceFuel;
 import net.minecraft.inventory.SlotFurnaceOutput;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
-import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -25,8 +24,8 @@ public class GrinderContainer extends Container {
     {
     	System.out.println("Flag 1");
         this.tileFurnace = furnaceInventory;
-        this.addSlotToContainer(new Slot(furnaceInventory, 0, 56, 17));
-        this.addSlotToContainer(new SlotFurnaceFuel(furnaceInventory, 1, 56, 53));
+        this.addSlotToContainer(new Slot(furnaceInventory,1, 56, 53));
+        this.addSlotToContainer(new SlotGrinderHead(furnaceInventory, 0, 56, 17));
         this.addSlotToContainer(new SlotFurnaceOutput(p_i45794_1_.player, furnaceInventory, 2, 116, 35));
         int i;
 
@@ -115,7 +114,7 @@ public class GrinderContainer extends Container {
             ItemStack itemstack1 = slot.getStack();
             itemstack = itemstack1.copy();
 
-            if (index == 2)
+            if (index == 2) //was 2
             {
                 if (!this.mergeItemStack(itemstack1, 3, 39, true))
                 {
@@ -123,17 +122,17 @@ public class GrinderContainer extends Container {
                 }
 
                 slot.onSlotChange(itemstack1, itemstack);
-            }
+            }			    //1            0
             else if (index != 1 && index != 0)
             {
-                if (FurnaceRecipes.instance().getSmeltingResult(itemstack1) != null)
+                if (GrinderRecipes.Grinding().getGrindingResult(itemstack1) != null)
                 {
                     if (!this.mergeItemStack(itemstack1, 0, 1, false))
                     {
                         return null;
                     }
                 }
-                else if (TileEntityFurnace.isItemFuel(itemstack1))
+                else if (TileEntityGrinder.isItemFuel(itemstack1))
                 {
                     if (!this.mergeItemStack(itemstack1, 1, 2, false))
                     {

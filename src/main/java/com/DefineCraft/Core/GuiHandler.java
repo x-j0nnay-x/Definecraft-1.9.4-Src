@@ -1,10 +1,7 @@
 package com.DefineCraft.Core;
 
 import com.DefineCraft.Reference;
-import com.DefineCraft.Blocks.Grinder.GrinderContainer;
-import com.DefineCraft.Blocks.Grinder.GrinderGUI;
-import com.DefineCraft.Blocks.Grinder.GrinderLogic;
-
+import com.DefineCraft.Blocks.Grinder.*;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
@@ -25,7 +22,7 @@ public class GuiHandler implements IGuiHandler {
 		
 		if (tileEntity != null) {
 			switch(ID) {
-			case 0: return new GrinderContainer(player.inventory, (GrinderLogic)tileEntity);
+			case 0: return new GrinderContainer(player.inventory, (TileEntityGrinder)tileEntity);
 			}
 		}
 		
@@ -38,7 +35,7 @@ public class GuiHandler implements IGuiHandler {
 
         if (tileEntity != null) {
               switch(ID) {
-              case  0: return new GrinderGUI(player.inventory, (GrinderLogic)tileEntity);
+              case  0: return new GrinderGUI(player.inventory, (TileEntityGrinder)tileEntity);
               }
         }
 

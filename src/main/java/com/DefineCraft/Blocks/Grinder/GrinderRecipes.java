@@ -36,10 +36,10 @@ public class GrinderRecipes
     {
         //Grinder recipe adding
         //this.addGrinding(Main.DOre.getIdFromBlock(Main.DOre), new ItemStack(Main.DGem, 3), 1.0F);
-        this.addGrinding(DefineCraftModBlocks.SilverOre.getIdFromBlock(DefineCraftModBlocks.SilverOre), new ItemStack(DefineCraftModItems.SilverDust, 2), 1.0F);
-        this.addGrinding(DefineCraftModBlocks.TerbiumOre.getIdFromBlock(DefineCraftModBlocks.TerbiumOre), new ItemStack(DefineCraftModItems.TerbiumDust, 2), 1.0F);
-        this.addGrinding(DefineCraftModBlocks.HellStoneOre.getIdFromBlock(DefineCraftModBlocks.HellStoneOre), new ItemStack(DefineCraftModItems.HellStoneDust, 2), 1.0F);
-        this.addGrinding(DefineCraftModBlocks.PeridotOre.getIdFromBlock(DefineCraftModBlocks.PeridotOre), new ItemStack(DefineCraftModItems.Peridot, 3), 1.0F);
+        this.addGrinding(DefineCraftModBlocks.ISilverOre.getIdFromItem(DefineCraftModBlocks.ISilverOre), new ItemStack(DefineCraftModItems.SilverDust, 2), 1.0F);
+        this.addGrinding(DefineCraftModBlocks.ITerbiumOre.getIdFromItem(DefineCraftModBlocks.ITerbiumOre), new ItemStack(DefineCraftModItems.TerbiumDust, 2), 1.0F);
+        this.addGrinding(DefineCraftModBlocks.IHellStoneOre.getIdFromItem(DefineCraftModBlocks.IHellStoneOre), new ItemStack(DefineCraftModItems.HellStoneDust, 2), 1.0F);
+        this.addGrinding(DefineCraftModBlocks.IPeridotOre.getIdFromItem(DefineCraftModBlocks.IPeridotOre), new ItemStack(DefineCraftModItems.Peridot, 3), 1.0F);
         this.addGrinding(Blocks.OBSIDIAN.getIdFromBlock(Blocks.OBSIDIAN), new ItemStack(DefineCraftModItems.ObsidianDust, 2), 1.0F);
         this.addGrinding(Blocks.IRON_ORE.getIdFromBlock(Blocks.IRON_ORE), new ItemStack(DefineCraftModItems.IronDust, 2), 1.0F);
         this.addGrinding(Blocks.GOLD_ORE.getIdFromBlock(Blocks.GOLD_ORE), new ItemStack(DefineCraftModItems.GoldDust, 2), 1.0F);
@@ -70,7 +70,7 @@ public class GrinderRecipes
         return (ItemStack)this.GrindingList.get(Integer.valueOf(par1));
     }
 
-    public Map getSmeltingList()
+    public Map getGrindingList()
     {
         return this.GrindingList;
     }

@@ -1,5 +1,5 @@
 {
-    "parent": "mofurnacesmod:block/brickfurnace_active",
+   "parent":"definecraft:block/GrinderLit",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

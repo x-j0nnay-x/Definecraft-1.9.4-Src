@@ -35,13 +35,14 @@ public abstract class CommonProxy
 	    }
 	@EventHandler
     public void init(FMLInitializationEvent event){	
-		GameRegistry.registerWorldGenerator(new DefineOreGen(), 1);
+		GameRegistry.registerWorldGenerator(new DefineOreGen(), 2);
 		System.out.println("Loaded in DefineCraft Ore Gen");
 	}
 	
 	@EventHandler
 	public void postinit(FMLPostInitializationEvent event) {
 		DefineCraftOreDict.init();
+		DefineCraftModBlocks.postinit();
 	    System.out.println("Loaded DefineCraft Ore Dictionary");
 		System.out.println("Definecraft Is Loaded Up, You Are Ready To Play");
 	}

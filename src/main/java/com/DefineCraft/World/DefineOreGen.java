@@ -3,16 +3,13 @@ package com.DefineCraft.World;
 import java.util.Random;
 
 import com.DefineCraft.Core.DefineCraftModBlocks;
-
-import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraftforge.fml.common.IWorldGenerator;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-
+import java.util.Random;
 
 public class DefineOreGen implements IWorldGenerator
 {
@@ -38,35 +35,68 @@ public class DefineOreGen implements IWorldGenerator
 		
 	}
 
-	private void generateOverWorld(World world, Random rand, int i, int j)
+	private void generateOverWorld(World world, Random rand, int chunkX, int chunkZ)
     {
+		for (int k = 0; k < 16; k++)
+        {
+            int firstBlockXCoord = chunkX + rand.nextInt(16);
+            int firstBlockZCoord = chunkZ + rand.nextInt(16);
+            //Will be found between y = 0 and y = 38
+            int quisqueY = rand.nextInt(38);
+            BlockPos quisquePos = new BlockPos(firstBlockXCoord, quisqueY, firstBlockZCoord);
+            //The 10 as the second parameter sets the maximum vein size
+                (new WorldGenMinable(DefineCraftModBlocks.SilverOre.getDefaultState(), 5)).generate(world, rand, quisquePos);
+        }
+		for (int k = 0; k < 16; k++)
+        {
+            int firstBlockXCoord = chunkX + rand.nextInt(16);
+            int firstBlockZCoord = chunkZ + rand.nextInt(16);
+            //Will be found between y = 0 and y = 28
+            int quisqueY = rand.nextInt(28);
+            BlockPos quisquePos = new BlockPos(firstBlockXCoord, quisqueY, firstBlockZCoord);
+            //The 10 as the second parameter sets the maximum vein size
+                (new WorldGenMinable(DefineCraftModBlocks.TerbiumOre.getDefaultState(), 5)).generate(world, rand, quisquePos);
+        }for (int k = 0; k < 16; k++)
+        {
+            int firstBlockXCoord = chunkX + rand.nextInt(16);
+            int firstBlockZCoord = chunkZ + rand.nextInt(16);
+            //Will be found between y = 0 and y = 18
+            int quisqueY = rand.nextInt(18);
+            BlockPos quisquePos = new BlockPos(firstBlockXCoord, quisqueY, firstBlockZCoord);
+            //The 10 as the second parameter sets the maximum vein size
+                (new WorldGenMinable(DefineCraftModBlocks.GemOre.getDefaultState(), 3)).generate(world, rand, quisquePos);
+        }for (int k = 0; k < 16; k++)
+        {
+            int firstBlockXCoord = chunkX + rand.nextInt(16);
+            int firstBlockZCoord = chunkZ + rand.nextInt(16);
+            //Will be found between y = 0 and y = 40
+            int quisqueY = rand.nextInt(40);
+            BlockPos quisquePos = new BlockPos(firstBlockXCoord, quisqueY, firstBlockZCoord);
+            //The 10 as the second parameter sets the maximum vein size
+                (new WorldGenMinable(DefineCraftModBlocks.PeridotOre.getDefaultState(), 3)).generate(world, rand, quisquePos);
+        }
+		
+		
 		//your-block,metadata-of-block,Block-spawns-on,World,Ran,i=XPos,j=ZPos,maxX,maxZ,maxVeinSize,chancesToSpawn,minY,maxY)
-		addOreSpawn(DefineCraftModBlocks.SilverOre, 0, Blocks.STONE, world, rand, i, j, 16, 16, 7 + rand.nextInt(5), 5, 20, 38);
-		addOreSpawn(DefineCraftModBlocks.TerbiumOre, 0, Blocks.STONE, world, rand, i, j, 16, 16, 7 + rand.nextInt(5), 5, 10, 28);
-		addOreSpawn(DefineCraftModBlocks.PeridotOre, 0, Blocks.STONE, world, rand, i, j, 16, 6, 3+ rand.nextInt(5), 5, 10, 40);
-		addOreSpawn(DefineCraftModBlocks.GemOre, 0, Blocks.STONE, world, rand, i, j, 16, 16, 5, 3+ rand.nextInt(5), 10, 18);
+	//	addOreSpawn(DefineCraftModBlocks.SilverOre, 0, Blocks.STONE, world, rand, i, j, 16, 16, 7 + rand.nextInt(5), 5, 20, 38);
+	//	addOreSpawn(DefineCraftModBlocks.TerbiumOre, 0, Blocks.STONE, world, rand, i, j, 16, 16, 7 + rand.nextInt(5), 5, 10, 28);
+	//	addOreSpawn(DefineCraftModBlocks.PeridotOre, 0, Blocks.STONE, world, rand, i, j, 16, 6, 3+ rand.nextInt(5), 5, 10, 40);
+	//	addOreSpawn(DefineCraftModBlocks.GemOre, 0, Blocks.STONE, world, rand, i, j, 16, 16, 5, 3+ rand.nextInt(5), 10, 18);
     }
 
-    private void generateNeather(World world, Random rand, int i, int j)
+    private void generateNeather(World world, Random rand, int chunkX, int chunkZ)
     {
-    	addOreSpawn(DefineCraftModBlocks.HellStoneOre, 0, Blocks.NETHERRACK, world, rand, i, j, 16, 16, 5 + rand.nextInt(5), 5, 20, 146);
+    	for (int k = 0; k < 16; k++)
+        {
+            int firstBlockXCoord = chunkX + rand.nextInt(16);
+            int firstBlockZCoord = chunkZ + rand.nextInt(16);
+            //Will be found between y = 0 and y = 200
+            int quisqueY = rand.nextInt(200);
+            BlockPos quisquePos = new BlockPos(firstBlockXCoord, quisqueY, firstBlockZCoord);
+            //The 10 as the second parameter sets the maximum vein size
+                (new WorldGenMinable(DefineCraftModBlocks.HellStoneOre.getDefaultState(), 5)).generate(world, rand, quisquePos);
+        }
+    	//addOreSpawn(DefineCraftModBlocks.HellStoneOre, 0, Blocks.NETHERRACK, world, rand, i, j, 16, 16, 5 + rand.nextInt(5), 5, 20, 146);
     }
-    public void addOreSpawn(Block block, int metadata, Block target, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY)
-    {
-          int maxPossY = minY + (maxY - 1);
-          assert maxY > minY: "The maximum Y must be greater than the Minimum Y";
-          assert maxX > 0 && maxX <= 16: "addOreSpawn: The Maximum X must be greater than 0 and less than 16";
-          assert minY > 0: "addOreSpawn: The Minimum Y must be greater than 0";
-          assert maxY < 256 && maxY > 0: "addOreSpawn: The Maximum Y must be less than 256 but greater than 0";
-          assert maxZ > 0 && maxZ <= 16: "addOreSpawn: The Maximum Z must be greater than 0 and less than 16";
-         
-          int diffBtwnMinMaxY = maxY - minY;
-          for(int x = 0; x < chancesToSpawn; x++)
-          {
-                 int posX = blockXPos + random.nextInt(maxX);
-                 int posY = minY + random.nextInt(diffBtwnMinMaxY);
-                 int posZ = blockZPos + random.nextInt(maxZ);
-              //   new WorldGenMinable(block, metadata, maxVeinSize, target).generate(world, random, posX, posY, posZ);
-          }
-    }
+    
 }

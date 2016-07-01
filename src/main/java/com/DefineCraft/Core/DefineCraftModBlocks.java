@@ -10,14 +10,16 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.DefineCraft.Reference;
 import com.DefineCraft.Blocks.*;
-import com.DefineCraft.Blocks.Grinder.GrinderBlock;
-import com.DefineCraft.Blocks.Grinder.GrinderLogic;
+import com.DefineCraft.Blocks.Grinder.*;
+
 
 
 public class DefineCraftModBlocks
 {
 //gui blocks
-		public static Block GrinderIdle;
+		public static Block Grinder;
+		public static Item IGrinder;
+		public static ItemBlock IGrinderActive;
 		public static Block GrinderActive;
 		public static Block BarMaker;
 		public static Block SmartFurnace;
@@ -53,9 +55,11 @@ public class DefineCraftModBlocks
 		@EventHandler
 		public static void pre_init() {
 //gui blocks
-		//	Grinder = new GrinderBlock("Grinder", true);
-			GrinderIdle = new GrinderBlock(false, "GrinderIdel");
-			GrinderActive = new GrinderBlock(true, "GrinderActive");
+			GrinderActive = new GrinderBlock(true, "Grinder Lit");
+			IGrinderActive = new ItemBlock(GrinderActive);
+			Grinder = new GrinderBlock(false, "Grinder");
+			IGrinder = new ItemBlock(Grinder);
+			//GrinderActive = new GrinderBlock(true);
 
 		//	BarMaker = new BarMakerBlock("BarMaker");
 		//	SmartFurnace = new SmartFurnaceBlock("SmartFurnace");
@@ -88,12 +92,8 @@ public class DefineCraftModBlocks
 		}
     public static void init()
     {
-//TileEnt's
-    	GameRegistry.register(GrinderIdle.setRegistryName("GrinderIdle"));
-        GameRegistry.register(GrinderActive.setRegistryName("GrinderActive"));
-		GameRegistry.registerTileEntity(GrinderLogic.class, "Grinder");
-
-	//    GameRegistry.registerTileEntity(GrinderLogic.class, "Grinder");
+//Tile
+        GameRegistry.registerTileEntity(TileEntityGrinder.class, "TileEntityGrinder");
 	//    GameRegistry.registerTileEntity(BarMakerLogic.class, "BarMaker");
 	//    GameRegistry.registerTileEntity(GemChargerLogic.class, "ChemCharger");
 	//    GameRegistry.registerTileEntity(InfuserLogic.class, "Infuser");
@@ -103,8 +103,11 @@ public class DefineCraftModBlocks
 	    //FluidRegistry.registerFluid(MultenSilver);
 	   // FluidRegistry.registerFluid(MultenTerbium);
 //Blocks gui
-	//	GameRegistry.register(Grinder.setRegistryName("Grinder"));
-	//	GameRegistry.registerBlock(BarMaker, "BarMaker");
+    	GameRegistry.register(GrinderActive.setRegistryName("GrinderLit"));
+    	GameRegistry.register(IGrinderActive.setRegistryName("GrinderLit"));
+    	GameRegistry.register(Grinder.setRegistryName("Grinder"));
+    	GameRegistry.register(IGrinder.setRegistryName("Grinder"));
+  	//	GameRegistry.registerBlock(BarMaker, "BarMaker");
 	//	GameRegistry.registerBlock(SmartFurnace, "SmartFurnace");
 	//	GameRegistry.registerBlock(GemCharger, "GemCharger");
 	//	GameRegistry.registerBlock(Infuser, "Infuser");
@@ -131,6 +134,10 @@ public class DefineCraftModBlocks
     	GameRegistry.register(ISilverOre.setRegistryName("SilverOre"));
     	GameRegistry.register(PeridotOre.setRegistryName("PeridotOre"));
     	GameRegistry.register(IPeridotOre.setRegistryName("PeridotOre"));
+    }
+    public static void postinit()
+    {
+	GameRegistry.registerTileEntity(TileEntityGrinder.class, "Grinder");
     }
 	
 }

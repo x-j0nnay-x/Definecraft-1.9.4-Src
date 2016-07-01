@@ -1,8 +1,0 @@
-{
-  "parent": "block/orientable",
-  "textures": {
-    "top": "mofurnacesmod:blocks/BrickFurnace_top",
-    "front": "mofurnacesmod:blocks/BrickFurnace_front_idle",
-    "side": "mofurnacesmod:blocks/BrickFurnace_side"
-  }
-}

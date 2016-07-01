@@ -60,8 +60,8 @@ public class DefineCraftRecipes
               GameRegistry.addRecipe(new ItemStack(DefineCraftModItems.ObsidianSpade, 1), new Object[] {" 1 ", " 4 ", " 4 ", '1', DefineCraftModItems.ObsidianBar, '4', DefineCraftModItems.GoldStick});
 
 //Crafting Blocks
-              GameRegistry.addRecipe(new ItemStack(DefineCraftModBlocks.GrinderIdle, 1), new Object[] {"xwx", "z z","xzx", 'w', DefineCraftModItems.GrinderHead, 'x', Blocks.STONE, 'z',Blocks.COBBLESTONE});
-    //          GameRegistry.addRecipe(new ItemStack(DefineCraftModBlocks.BarMaker, 1), new Object[] {"121", "232", "121", '1', DefineCraftModItems.SilverBar, '2', Blocks.COBBLESTONE, '3', DefineCraftModBlocks.SmartFurnace});
+              GameRegistry.addRecipe(new ItemStack(DefineCraftModBlocks.IGrinder, 1), new Object[] {"xwx", "z z","xzx", 'w', DefineCraftModItems.GrinderHead, 'x', Blocks.STONE, 'z',Blocks.COBBLESTONE});
+   //          GameRegistry.addRecipe(new ItemStack(DefineCraftModBlocks.BarMaker, 1), new Object[] {"121", "232", "121", '1', DefineCraftModItems.SilverBar, '2', Blocks.COBBLESTONE, '3', DefineCraftModBlocks.SmartFurnace});
     //          GameRegistry.addShapelessRecipe(new ItemStack(DefineCraftModBlocks.SmartFurnace, 1), new Object[] {DefineCraftModItems.LogicChip, Blocks.FURNACE});
     //          GameRegistry.addRecipe(new ItemStack(DefineCraftModBlocks.Infuser, 1), new Object[] {"141", "232", "212", '1', DefineCraftModItems.HellStoneBar, '2', Blocks.PISTON, '3', DefineCraftModBlocks.BarMaker, '4', DefineCraftModItems.LogicChip});
     //          GameRegistry.addRecipe(new ItemStack(DefineCraftModBlocks.GemCharger, 1), new Object[] {"222", "232", "212",  '1', Items.LAVA_BUCKET, '2', Blocks.OBSIDIAN, '3', DefineCraftModBlocks.SmartFurnace});
@@ -87,7 +87,7 @@ public class DefineCraftRecipes
               GameRegistry.addRecipe(new ItemStack(DefineCraftModItems.SilverLegs, 1), new Object[] {"XXX", "X X", "X X", 'X', DefineCraftModItems.SilverBar});
               GameRegistry.addRecipe(new ItemStack(DefineCraftModItems.SilverBoots, 1), new Object[] {"X X", "X X", 'X', DefineCraftModItems.SilverBar});
 //Smelting 
-              /*
+              
               GameRegistry.addSmelting(Items.ROTTEN_FLESH, new ItemStack(Items.LEATHER), 0.1F);
               GameRegistry.addSmelting(Blocks.OBSIDIAN, new ItemStack(DefineCraftModItems.ObsidianBar), 1.1F);
               GameRegistry.addSmelting(DefineCraftModBlocks.SilverOre, new ItemStack(DefineCraftModItems.SilverBar), 1.6F);
@@ -102,6 +102,6 @@ public class DefineCraftRecipes
               GameRegistry.addSmelting(DefineCraftModItems.IronDust, new ItemStack(Items.IRON_INGOT), 1.6F);
               GameRegistry.addSmelting(DefineCraftModItems.GoldDust, new ItemStack(Items.GOLD_INGOT), 1.9F);
               GameRegistry.addSmelting(DefineCraftModItems.DiamondDust, new ItemStack(Items.DIAMOND), 2.1F);
-*/
+
     }
 }

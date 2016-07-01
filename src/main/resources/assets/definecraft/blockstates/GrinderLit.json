@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "definecraft:GrinderLit" },
+        "facing=south": { "model": "definecraft:GrinderLit", "y": 180 },
+        "facing=west":  { "model": "definecraft:GrinderLit", "y": 270 },
+        "facing=east":  { "model": "definecraft:GrinderLit", "y": 90 }
+    }
+}

@@ -14,9 +14,10 @@ import net.minecraftforge.client.model.ModelLoader;
 public class BlockRenderRegister {
 	
 	public static void registerBlockRenderer() {
-//TileEntity
-	//	ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(DefineCraftModBlocks.GrinderActive), 0, new ModelResourceLocation(Reference.ModID + ":" + "GrinderActive", "inventory"));
-	//	ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(DefineCraftModBlocks.GrinderIdle), 0, new ModelResourceLocation(Reference.ModID + ":" + "GrinderIdle", "inventory"));
+//Tile Blocks
+		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(DefineCraftModBlocks.Grinder), 0, new ModelResourceLocation(Reference.ModID + ":" + "Grinder", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(DefineCraftModBlocks.GrinderActive), 0, new ModelResourceLocation(Reference.ModID + ":" + "GrinderLit", "inventory"));
+
 //vanishing Block		
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(DefineCraftModBlocks.meltingObsidian), 0, new ModelResourceLocation(Reference.ModID + ":" + "meltingObsidian", "inventory"));
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(DefineCraftModBlocks.meltingObsidian0), 0, new ModelResourceLocation(Reference.ModID + ":" + "meltingObsidian0", "inventory"));
